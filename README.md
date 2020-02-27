@@ -2,7 +2,7 @@
 
 This is my Final Year Project: service robot in receptionist of office.
 
-I used Zenbo robot (product od ASUS Technology, Taiwan) for my project to investigate the ability of this service family robot. Then, the operating system of robot is a Android.
+I used Zenbo robot (product od ASUS Technology, Taiwan) for my project to investigate the ability of this service family robot. Then, the operating system of robot is a Android. Before starting the development, Zenbo SDK need to be downloaded from the ASUS developer.
 
 The tasks will be done by robot:
 - As a guide tour 
