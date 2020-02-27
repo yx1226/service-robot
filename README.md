@@ -6,7 +6,7 @@ I used Zenbo robot (product od ASUS Technology, Taiwan) for my project to invest
 
 The tasks will be done by robot:
 - As a guide tour 
-- Inform the exercutive if outsider request to meet with her/him.
+- Inform the executive if outsider request to meet with him/ her.
 - Introduce the faculty by providing the QR code for outsider to scan and access our webpage.
 
 For this project's main objective is to study the human-robot interaction via information counter service. Outsider and member of faculty will be encouraged to communicate with this robot to get the further information about school.
