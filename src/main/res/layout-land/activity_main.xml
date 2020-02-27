@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+    //Tour Layout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_main"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_meet"
+            android:layout_width="263dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="25dp"
+            android:background="#BFE91E63"
+            android:text="MEET SOMEONE"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_tour" />
+
+        <Button
+            android:id="@+id/btn_tour"
+            android:layout_width="263dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="116dp"
+            android:layout_marginBottom="27dp"
+            android:background="#A800BCD4"
+            android:text="TOUR"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_meet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_info"
+            android:layout_width="263dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="46dp"
+            android:background="#BFFFEB3B"
+            android:text="KNOW ABOUT US"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/txtView_main"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_meet" />
+
+        <TextView
+            android:id="@+id/txtView_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="34dp"
+            android:background="#AE0A0707"
+            android:text="Welcome to dean office of FTSM!!"
+            android:textColor="#FAFCFAFA"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_info" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    //Meet Layout
+
+    //Info Layout
+
+    //Position List
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_tour"
+        android:layout_width="734dp"
+        android:layout_height="418dp"
+        android:background="@drawable/bg0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="518dp"
+            android:layout_height="273dp"
+            android:layout_marginStart="131dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="131dp"
+            android:layout_marginBottom="23dp"
+            android:src="@drawable/map"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="31dp"
+            android:background="#B9090808"
+            android:text='Please click the "X" to continue to next checkpoint'
+            android:textColor="#F2FCFBFB"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <Button
+            android:id="@+id/btn_endtour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="76dp"
+            android:background="#C6F44336"
+            android:text="END TOUR"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_meet"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_home"
+            android:layout_width="72dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="600dp"
+            android:layout_marginTop="350dp"
+            android:background="#B0D81B60"
+            android:text="HOME"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="60dp"
+            android:text="NAME: "
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btn_submit"
+            app:layout_constraintEnd_toStartOf="@+id/editText_name"
+            app:layout_constraintTop_toBottomOf="@+id/textView_title2" />
+
+        <TextView
+            android:id="@+id/textView_title4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="165dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="60dp"
+            android:text="PHONE: "
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btn_submit"
+            app:layout_constraintEnd_toStartOf="@+id/editText_name"
+            app:layout_constraintTop_toBottomOf="@+id/textView_title2" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="147dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="100dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_takePhoto"
+            app:layout_constraintEnd_toStartOf="@+id/editText_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_title"
+            tools:src="@tools:sample/avatars[3]" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="112dp"
+            android:layout_height="41dp"
+            android:layout_marginEnd="206dp"
+            android:layout_marginBottom="91dp"
+            android:background="#D597DF4B"
+            android:text="SUBMIT"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_takePhoto"
+            app:layout_constraintTop_toBottomOf="@+id/textView_title" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="360dp"
+            android:background="#C60A0A0A"
+            android:text="Please fill in your personal information "
+            android:textColor="#FAF9F9"
+            app:layout_constraintEnd_toStartOf="@+id/btn_home"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_takePhoto"
+            android:layout_width="197dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="250dp"
+            android:layout_marginEnd="133dp"
+            android:background="#53B7E7"
+            android:text="Take your photo"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/btn_submit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editText_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="400dp"
+            android:layout_marginTop="116dp"
+            android:ems="10"
+            android:hint="Your name"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="216dp"
+            android:text=" Meet with : "
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btn_submit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="216dp"
+            android:text="Position executive"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btn_submit"
+            app:layout_constraintStart_toEndOf="@+id/textView_title"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editText_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="400dp"
+            android:layout_marginTop="200dp"
+            android:ems="10"
+            android:hint="Your phone no."
+            android:inputType="phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_info"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <VideoView
+            android:id="@+id/videoViewer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="93dp"
+            android:layout_marginTop="53dp"
+            android:layout_marginEnd="93dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_staff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </VideoView>
+
+        <Button
+            android:id="@+id/btn_qrcode"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="76dp"
+            android:layout_marginBottom="56dp"
+            android:background="#F075E031"
+            android:text="QR CODE"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_staff"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_home4"
+            android:layout_width="226dp"
+            android:layout_height="67dp"
+            android:layout_marginEnd="97dp"
+            android:layout_marginBottom="54dp"
+            android:background="#A8DF49BE"
+            android:text="MAIN MENU"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_programme"
+            app:layout_constraintTop_toBottomOf="@+id/videoViewer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_qr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_positionlist"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPosition"
+            android:layout_width="0dp"
+            android:layout_height="260dp"
+            android:layout_marginStart="93dp"
+            android:layout_marginTop="53dp"
+            android:layout_marginEnd="93dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
