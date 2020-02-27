@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "709570393957",
+    "firebase_url": "https://myfyp-106f4.firebaseio.com",
+    "project_id": "myfyp-106f4",
+    "storage_bucket": "myfyp-106f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709570393957:android:12c66c2c6e6b2df37c538c",
+        "android_client_info": {
+          "package_name": "com.asus.myfyp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709570393957-foaavnc8mf0hlbraoolknlvaff5lkf65.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAayUu7f1OhOc2vbNhQHk1nJDpZWLOod7I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "709570393957-foaavnc8mf0hlbraoolknlvaff5lkf65.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
