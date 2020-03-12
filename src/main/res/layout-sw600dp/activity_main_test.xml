@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_qr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/lyt_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/lyt_main"
+        app:layout_constraintTop_toTopOf="@+id/lyt_main">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <TextView
+                android:id="@+id/txt_close"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:text="X" />
+
+            <ImageView
+                android:id="@+id/img_qr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/qr" />
+
+            <TextView
+                android:id="@+id/txt_scanme"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:text="Scan Me"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_meet"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linear_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/btn_submit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.31"
+            app:layout_constraintStart_toEndOf="@+id/linear_photo"
+            app:layout_constraintTop_toBottomOf="@+id/textView_titleMeet"
+            app:layout_constraintVertical_bias="0.71000004">
+
+            <TextView
+                android:id="@+id/txt_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PHONE: "
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editText_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Your phone no."
+                android:inputType="phone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/linear_phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toEndOf="@+id/linear_photo"
+            app:layout_constraintTop_toBottomOf="@+id/textView_titleMeet"
+            app:layout_constraintVertical_bias="0.69">
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NAME: "
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editText_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Your name"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_titleMeet"
+            app:layout_constraintVertical_bias="0.25">
+
+            <ImageView
+                android:id="@+id/userPhoto"
+                android:layout_width="147dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                tools:src="@tools:sample/avatars[3]" />
+
+            <Button
+                android:id="@+id/btn_takePhoto"
+                android:layout_width="197dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                android:background="#53B7E7"
+
+                android:text="Take your photo"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_home1"
+            android:layout_width="72dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="600dp"
+            android:layout_marginTop="350dp"
+            android:background="#B0D81B60"
+            android:text="HOME"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="112dp"
+            android:layout_height="41dp"
+            android:background="#D597DF4B"
+            android:text="SUBMIT"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_home1"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toEndOf="@+id/linear_photo"
+            app:layout_constraintTop_toBottomOf="@+id/textView_titleMeet"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/txt_fillInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="360dp"
+            android:background="#C60A0A0A"
+            android:text="Please fill in your personal information "
+            android:textColor="#FAF9F9"
+            app:layout_constraintEnd_toStartOf="@+id/btn_home1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_titleMeet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="216dp"
+            android:text=" Meet with : "
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btn_submit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_datameet"
+        android:layout_width="127dp"
+        android:layout_height="158dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="@+id/lyt_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linear_phone1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/btn_home2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.23"
+            app:layout_constraintStart_toEndOf="@+id/userPhoto1"
+            app:layout_constraintTop_toBottomOf="@+id/textView_titlemeet">
+
+            <TextView
+                android:id="@+id/txt_phone1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PHONE: "
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/getText_phone1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01234567"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/linear_phone1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.17"
+            app:layout_constraintStart_toEndOf="@+id/userPhoto1"
+            app:layout_constraintTop_toBottomOf="@+id/textView_titlemeet"
+            app:layout_constraintVertical_bias="0.72">
+
+            <TextView
+                android:id="@+id/txt_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NAME: "
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/editText_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="xxx"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/userPhoto1"
+            android:layout_width="147dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_home2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.22"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_titlemeet"
+            tools:src="@tools:sample/avatars[3]" />
+
+        <Button
+            android:id="@+id/btn_home2"
+            android:layout_width="72dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="600dp"
+            android:layout_marginTop="350dp"
+            android:background="#B0D81B60"
+            android:text="HOME"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_fillInfo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#C60A0A0A"
+            android:text="Please hold on"
+            android:textColor="#FAF9F9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear_phone1"
+            app:layout_constraintVertical_bias="0.62" />
+
+        <TextView
+            android:id="@+id/textView_titlemeet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text=" Meet with : "
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btn_home2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.110000014" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_tour"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg0"
+        tools:context=".TourActivity">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="518dp"
+            android:layout_height="273dp"
+            android:layout_marginStart="131dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="131dp"
+            android:layout_marginBottom="23dp"
+            android:src="@drawable/map"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="31dp"
+            android:background="#B9090808"
+            android:text='Please click the "X" to continue to next checkpoint'
+            android:textColor="#F2FCFBFB"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <Button
+            android:id="@+id/btn_endtour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="76dp"
+            android:background="#C6F44336"
+            android:text="END TOUR"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_lecturerlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg0">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            iconicfiedByDefault="false"
+            android:layout_width="899dp"
+            android:layout_height="93dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:queryHint="Search Lecturer" />
+
+        <ListView
+            android:id="@+id/myList"
+            android:layout_width="897dp"
+            android:layout_height="1189dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_positionlist"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txt_listview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Position List"
+            android:textSize="48dp"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="832dp"
+            android:layout_height="923dp"
+            android:padding="46dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.90999997">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/p0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EF9993"
+                    android:text="Dean"
+                    android:textColor="#100F0F"
+                    android:textSize="36dp" />
+
+                <TextView
+                    android:id="@+id/p1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Deputy Dean \n(Research and Innovation)"
+                    android:textSize="36dp" />
+
+                <TextView
+                    android:id="@+id/p2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Deputy Dean \n(Networking and Income Generation)"
+                    android:textSize="36dp" />
+
+                <TextView
+                    android:id="@+id/p3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dean"
+                    android:textSize="36dp" />
+
+                <TextView
+                    android:id="@+id/p4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Assistant Dean \n(Quality and Strategy)"
+                    android:textSize="40dp" />
+
+                <TextView
+                    android:id="@+id/p5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Assistant Dean \n(Entrepreneurship and Creativity)"
+                    android:textSize="36dp" />
+
+                <TextView
+                    android:id="@+id/p6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Secretary of Dean"
+                    android:textSize="36dp" />
+
+                <TextView
+                    android:id="@+id/p7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ICT Manager"
+                    android:textSize="36dp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#F8121111"
+            android:text="Please select the "
+            android:textColor="#F7FDFBFB"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txt_listview"
+            app:layout_constraintVertical_bias="0.9" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_doctor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg0">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/doctor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_bachelor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg0">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/img_cs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="906dp"
+                    android:src="@drawable/cs" />
+
+                <ImageView
+                    android:id="@+id/img_it"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/it" />
+
+                <ImageView
+                    android:id="@+id/img_seis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/is" />
+
+                <ImageView
+                    android:id="@+id/img_semm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mm" />
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <Button
+            android:id="@+id/btn_backinfo"
+            android:layout_width="164dp"
+            android:layout_height="93dp"
+            android:text="Back"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.93" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_master"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg0">
+
+        <ScrollView
+            android:id="@+id/scrollView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/master" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mcoursework" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="836dp"
+                    android:src="@drawable/mmodule" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mresearch" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mcs" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_backinfo1"
+            android:layout_width="164dp"
+            android:layout_height="93dp"
+            android:text="Back"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@+id/scrollView3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.96" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_info"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linear_programme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="129dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frame"
+            app:layout_constraintVertical_bias="0.18">
+
+            <Button
+                android:id="@+id/btn_bachelor"
+                android:layout_width="300dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:text="Bachelor"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/btn_master"
+                android:layout_width="300dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="46dp"
+                android:layout_marginRight="46dp"
+                android:text="Master"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/btn_doctor"
+                android:layout_width="300dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:text="Doctor (PHD)"
+                android:textSize="36sp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="458dp"
+            android:layout_height="194dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.32">
+
+            <VideoView
+                android:id="@+id/videoViewer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.87">
+
+            <Button
+                android:id="@+id/btn_qrcode"
+                android:layout_width="210dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="@android:dimen/thumbnail_width"
+                android:background="#F075E031"
+                android:text="QR CODE"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/btn_home"
+                android:layout_width="276dp"
+                android:layout_height="80dp"
+                android:background="#A8DF49BE"
+                android:text="MAIN MENU"
+                android:textSize="36sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_main"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_meet"
+            android:layout_width="539dp"
+            android:layout_height="146dp"
+            android:layout_marginBottom="25dp"
+            android:background="#BFE91E63"
+            android:text="MEET SOMEONE"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_tour" />
+
+        <Button
+            android:id="@+id/btn_tour"
+            android:layout_width="539dp"
+            android:layout_height="146dp"
+            android:layout_marginTop="116dp"
+            android:layout_marginBottom="27dp"
+            android:background="#A800BCD4"
+            android:text="TOUR"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_meet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_info"
+            android:layout_width="539dp"
+            android:layout_height="146dp"
+            android:background="#BFFFEB3B"
+            android:text="KNOW ABOUT US"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_meet" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
