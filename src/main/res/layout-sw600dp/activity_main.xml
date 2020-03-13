@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_main"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_meet"
+            android:layout_width="539dp"
+            android:layout_height="146dp"
+            android:layout_marginBottom="25dp"
+            android:background="#BFE91E63"
+            android:text="MEET SOMEONE"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_tour" />
+
+        <Button
+            android:id="@+id/btn_tour"
+            android:layout_width="539dp"
+            android:layout_height="146dp"
+            android:layout_marginTop="116dp"
+            android:layout_marginBottom="27dp"
+            android:background="#A800BCD4"
+            android:text="TOUR"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_meet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_info"
+            android:layout_width="539dp"
+            android:layout_height="146dp"
+            android:background="#BFFFEB3B"
+            android:text="KNOW ABOUT US"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_meet" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_meet"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linear_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/btn_submit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.31"
+            app:layout_constraintStart_toEndOf="@+id/linear_photo"
+            app:layout_constraintTop_toBottomOf="@+id/textView_titleMeet"
+            app:layout_constraintVertical_bias="0.71000004">
+
+            <TextView
+                android:id="@+id/txt_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PHONE: "
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editText_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Your phone no."
+                android:inputType="phone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/linear_phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toEndOf="@+id/linear_photo"
+            app:layout_constraintTop_toBottomOf="@+id/textView_titleMeet"
+            app:layout_constraintVertical_bias="0.69">
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NAME: "
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editText_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Your name"
+                android:inputType="textPersonName" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_titleMeet"
+            app:layout_constraintVertical_bias="0.25">
+
+            <ImageView
+                android:id="@+id/userPhoto"
+                android:layout_width="147dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                tools:src="@tools:sample/avatars[3]" />
+
+            <Button
+                android:id="@+id/btn_takePhoto"
+                android:layout_width="197dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                android:background="#53B7E7"
+
+                android:text="Take your photo"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_home1"
+            android:layout_width="72dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="600dp"
+            android:layout_marginTop="350dp"
+            android:background="#B0D81B60"
+            android:text="HOME"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="112dp"
+            android:layout_height="41dp"
+            android:background="#D597DF4B"
+            android:text="SUBMIT"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_home1"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toEndOf="@+id/linear_photo"
+            app:layout_constraintTop_toBottomOf="@+id/textView_titleMeet"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/txt_fillInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="360dp"
+            android:background="#C60A0A0A"
+            android:text="Please fill in your personal information "
+            android:textColor="#FAF9F9"
+            app:layout_constraintEnd_toStartOf="@+id/btn_home1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_titleMeet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="216dp"
+            android:text=" Meet with : "
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btn_submit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_datameet"
+        android:layout_width="127dp"
+        android:layout_height="158dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="@+id/lyt_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linear_phone1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/btn_home2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.23"
+            app:layout_constraintStart_toEndOf="@+id/userPhoto1"
+            app:layout_constraintTop_toBottomOf="@+id/textView_titlemeet">
+
+            <TextView
+                android:id="@+id/txt_phone1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PHONE: "
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/getText_phone1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01234567"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/linear_phone1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.17"
+            app:layout_constraintStart_toEndOf="@+id/userPhoto1"
+            app:layout_constraintTop_toBottomOf="@+id/textView_titlemeet"
+            app:layout_constraintVertical_bias="0.72">
+
+            <TextView
+                android:id="@+id/txt_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NAME: "
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/editText_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="xxx"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/userPhoto1"
+            android:layout_width="147dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_home2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.22"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_titlemeet"
+            tools:src="@tools:sample/avatars[3]" />
+
+        <Button
+            android:id="@+id/btn_home2"
+            android:layout_width="72dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="600dp"
+            android:layout_marginTop="350dp"
+            android:background="#B0D81B60"
+            android:text="HOME"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_fillInfo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#C60A0A0A"
+            android:text="Please hold on"
+            android:textColor="#FAF9F9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear_phone1"
+            app:layout_constraintVertical_bias="0.62" />
+
+        <TextView
+            android:id="@+id/textView_titlemeet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text=" Meet with : "
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btn_home2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.110000014" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_positionlist"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txt_listview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Position List"
+            android:textSize="80dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.73" />
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="1311dp"
+            android:layout_height="606dp"
+            android:padding="46dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.90999997">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FBFBF9"
+                android:orientation="vertical"
+                android:padding="46dp">
+
+                <TextView
+                    android:id="@+id/p0"
+                    android:layout_width="1143dp"
+                    android:layout_height="97dp"
+                    android:background="#FFFFFF"
+                    android:text="Dean"
+                    android:textAlignment="gravity"
+                    android:textColor="#100F0F"
+                    android:textSize="48dp"
+                    android:onClick="meetWithYou"/>
+
+                <TextView
+                    android:id="@+id/p1"
+                    android:layout_width="match_parent"
+                    android:layout_height="97dp"
+                    android:text="Deputy Dean (Research and Innovation)"
+                    android:textSize="48dp"
+                    android:textStyle="bold"
+                    android:onClick="meetWithYou"/>
+
+                <TextView
+                    android:id="@+id/p2"
+                    android:layout_width="match_parent"
+                    android:layout_height="97dp"
+                    android:text="Deputy Dean (Networking and Income Generation)"
+                    android:textSize="48dp"
+                    android:onClick="meetWithYou"/>
+
+                <TextView
+                    android:id="@+id/p3"
+                    android:layout_width="match_parent"
+                    android:layout_height="97dp"
+                    android:text="Dean"
+                    android:textSize="48dp"
+                    android:onClick="meetWithYou"/>
+
+                <TextView
+                    android:id="@+id/p4"
+                    android:layout_width="1143dp"
+                    android:layout_height="97dp"
+                    android:text="Assistant Dean (Quality and Strategy)"
+                    android:textSize="48dp"
+                    android:onClick="meetWithYou"/>
+
+                <TextView
+                    android:id="@+id/p5"
+                    android:layout_width="match_parent"
+                    android:layout_height="97dp"
+                    android:text="Assistant Dean (Entrepreneurship and Creativity)"
+                    android:textSize="48dp"
+                    android:onClick="meetWithYou"/>
+
+                <TextView
+                    android:id="@+id/p6"
+                    android:layout_width="match_parent"
+                    android:layout_height="97dp"
+                    android:text="Secretary of Dean"
+                    android:textSize="48dp"
+                    android:onClick="meetWithYou"/>
+
+                <TextView
+                    android:id="@+id/p7"
+                    android:layout_width="match_parent"
+                    android:layout_height="97dp"
+                    android:text="ICT Manager"
+                    android:textSize="48dp"
+                    android:onClick="meetWithYou"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_tour"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        tools:context=".TourActivity">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="927dp"
+            android:layout_height="594dp"
+            android:layout_marginStart="131dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="131dp"
+            android:src="@drawable/map"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_endtour"
+            android:layout_width="223dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="76dp"
+            android:background="#FFEB3B"
+            android:text="END TOUR"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_qr"
+        android:layout_width="1058dp"
+        android:layout_height="671dp"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/lyt_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toStartOf="@+id/lyt_main"
+        app:layout_constraintTop_toTopOf="@+id/lyt_main">
+
+        <LinearLayout
+            android:layout_width="649dp"
+            android:layout_height="665dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_close"
+                android:layout_width="86dp"
+                android:layout_height="62dp"
+                android:layout_gravity="end"
+                android:text="X"
+                android:textColor="#E91E63"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img_qr"
+                android:layout_width="474dp"
+                android:layout_height="447dp"
+                android:scaleType="fitXY"
+
+                android:src="@drawable/qr" />
+
+            <TextView
+                android:id="@+id/txt_scanme"
+                android:layout_width="282dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Scan Me"
+                android:textAlignment="center"
+                android:textColor="#070606"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_bachelor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btn_prev"
+                android:layout_width="93dp"
+                android:layout_height="93dp"
+                android:layout_marginTop="150dp"
+                android:text="prev" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="93dp"
+                android:layout_height="93dp"
+                android:layout_marginTop="150dp"
+                android:text="next" />
+
+            <Button
+                android:id="@+id/btn_backinfo"
+                android:layout_width="164dp"
+                android:layout_height="93dp"
+                android:layout_marginTop="150dp"
+                android:text="Back"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+        <ImageSwitcher
+            android:id="@+id/img_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_admission"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.13999999">
+
+            <RadioButton
+                android:id="@+id/malaysian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:onClick="checkButton"
+                android:text="Diploma/ Matriculation/ STPM"
+                android:textSize="36dp" />
+
+            <RadioButton
+                android:id="@+id/international"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:onClick="checkButton"
+                android:text="Internation Student"
+                android:textSize="36dp" />
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/img_citizen"
+            android:layout_width="1284dp"
+            android:layout_height="615dp"
+            android:src="@drawable/badmission"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/img_noncitizen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.96" />
+
+        <ImageView
+            android:id="@+id/img_noncitizen"
+            android:layout_width="1284dp"
+            android:layout_height="610dp"
+            android:src="@drawable/biadmission"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_doctor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/doctor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_backinfo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textSize="36dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.92"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.13" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_lecturer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_office"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RadioGroup
+            android:id="@+id/radioGroupOffice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.13999999">
+
+            <RadioButton
+                android:id="@+id/dean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:onClick="checkOfficeButton"
+                android:text="Dean Office"
+                android:textSize="36dp" />
+
+            <RadioButton
+                android:id="@+id/hepa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:onClick="checkOfficeButton"
+                android:text="Hepa/ Academic Office"
+                android:textSize="36dp" />
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/img_deanoffice"
+            android:layout_width="1284dp"
+            android:layout_height="615dp"
+            android:src="@drawable/ftsm"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/img_hepaoffice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.96" />
+
+        <ImageView
+            android:id="@+id/img_hepaoffice"
+            android:layout_width="1284dp"
+            android:layout_height="610dp"
+            android:src="@drawable/biadmission"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lyt_info"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lyt_main">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/frame"
+                android:layout_width="458dp"
+                android:layout_height="194dp"
+                android:layout_gravity="center">
+
+                <VideoView
+                    android:id="@+id/videoViewer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_officelecturer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="129dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_admission"
+                    android:layout_width="300dp"
+                    android:layout_height="110dp"
+                    android:text="Admission"
+                    android:textSize="36sp" />
+
+                <Button
+                    android:id="@+id/btn_office"
+                    android:layout_width="300dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="46dp"
+                    android:layout_marginRight="46dp"
+                    android:text="Office"
+                    android:textSize="36sp" />
+
+                <Button
+                    android:id="@+id/btn_lecturer"
+                    android:layout_width="300dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center"
+                    android:text="Lecturer"
+                    android:textSize="36sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_programme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="129dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/btn_bachelor"
+                    android:layout_width="300dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center"
+                    android:text="Bachelor"
+                    android:textSize="36sp" />
+
+                <Button
+                    android:id="@+id/btn_master"
+                    android:layout_width="300dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="46dp"
+                    android:layout_marginRight="46dp"
+                    android:text="Master"
+                    android:textSize="36sp" />
+
+                <Button
+                    android:id="@+id/btn_doctor"
+                    android:layout_width="300dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center"
+                    android:text="Doctor (PHD)"
+                    android:textSize="36sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/btn_qrcode"
+                    android:layout_width="210dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@android:dimen/thumbnail_width"
+                    android:background="#F075E031"
+                    android:text="QR CODE"
+                    android:textSize="36sp" />
+
+                <Button
+                    android:id="@+id/btn_home"
+                    android:layout_width="276dp"
+                    android:layout_height="80dp"
+                    android:background="#A8DF49BE"
+                    android:text="MAIN MENU"
+                    android:textSize="36sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
